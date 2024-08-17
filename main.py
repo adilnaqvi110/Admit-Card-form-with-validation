@@ -1,10 +1,10 @@
 from form import student_form
+from db import insert_student_data
 from PIL import Image
-from torchvision import transforms, models
-import streamlit as st #type:ignore
-import io
-import cv2
+import streamlit as st
 import numpy as np
+import io,cv2
+
 
 def convert_uploadedfile_to_image(uploaded_file):
     # Read the uploaded file as a byte stream
@@ -45,6 +45,9 @@ def main():
             face,sig = sig,face
             student_data[4],student_data[5] = student_data[5],student_data[4]
             print("swapped")
+
+    # Insert the student data in the postgres database
+    insert_student_data(student_data)
 
 if __name__ == "__main__":
     main()

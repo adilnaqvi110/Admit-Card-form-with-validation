@@ -1,13 +1,13 @@
 import psycopg2
-import streamlit as st #type:ignore
+import streamlit as st 
 
 def get_db_connection():
     try:
         # Connect to your PostgreSQL database
         conn = psycopg2.connect(
-            dbname="your_db_name", 
-            user="your_username", 
-            password="your_password", 
+            dbname="admit-card-form", 
+            user="postgress", 
+            password="postgres", 
             host="localhost", 
             port="5432"
         )
