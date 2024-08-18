@@ -26,7 +26,7 @@ This project is a web-based application that allows users to submit their admit 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/admit-card-form.git
+   git clone https://github.com/adilnaqvi110/admit-card-form.git
    cd admit-card-form
 2. Build and run the Docker containers:
     ```bash
